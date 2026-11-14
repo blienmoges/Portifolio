@@ -178,8 +178,8 @@ export function Projects() {
         <SectionHead num="02" title="Selected work" />
         <div className="projects">
           {projects.map((p, i) => (
-            <Reveal key={p.title} delay={i * 90} className={p.featured ? "span-all" : ""}>
-              <GlowCard className={`project ${p.featured ? "is-featured" : ""}`}>
+            <Reveal key={p.title} delay={i * 90} className={p.featured || p.wide ? "span-all" : ""}>
+              <GlowCard className={`project ${p.featured ? "is-featured" : ""} ${p.wide ? "is-wide" : ""}`}>
                 {p.image && (
                   <figure className="shot">
                     <a className="shot-frame" href={p.live ?? p.image.src} target="_blank" rel="noreferrer" aria-label={`Open ${p.title}`}>

@@ -49,6 +49,7 @@ export type Project = {
   demo?: string; // e.g. a demo video or document link
   image?: { src: string; caption: string }; // screenshot in /public
   featured?: boolean;
+  wide?: boolean; // full-width card without the "Featured" badge
   status?: string; // optional small label
 };
 
@@ -96,6 +97,30 @@ export const projects: Project[] = [
     ],
     tech: ["RSS", "LLM summarization", "i18n", "ElevenLabs TTS"],
     live: "https://news-brief-frontend.vercel.app/news",
+    image: {
+      src: "/projects/newsbrief.jpg",
+      caption:
+        "News feed with category tabs (Technology, Health, Sports, Business, Politics), trending Ethiopian stories you can bookmark, and the News Brief Assistant chatbot \"Tim\" with voice input.",
+    },
+  },
+  {
+    title: "Movielia",
+    description:
+      "A React movie recommendation web app that gives users personalized suggestions based on their preferences. Users can search movies, view details, get recommendations by genre and keep a favourites/watch list. Built as a team project.",
+    highlights: [
+      "Search, browse movies and series, and open detailed movie pages",
+      "Genre-based recommendations powered by the TMDB API",
+      "Favourites/watch list, login and sign-up pages, client-side routing",
+    ],
+    tech: ["React", "React Router", "TMDB API", "JavaScript", "CSS"],
+    repo: "https://github.com/samson-16/movielia",
+    live: "https://movielia-one.vercel.app/",
+    wide: true,
+    image: {
+      src: "/projects/movielia.jpg",
+      caption:
+        "Movies page: a grid of the latest releases with posters, ratings and release year, plus Home, Series and Favourites sections.",
+    },
   },
   {
     title: "Smart AI Parking Gate",

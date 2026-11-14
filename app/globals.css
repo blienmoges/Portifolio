@@ -532,7 +532,7 @@ a:hover > .arrow, .btn:hover .arrow { transform: translate(2px, -2px); }
   line-height: 1.5;
 }
 .highlights svg { flex: none; margin-top: 2px; color: var(--accent); }
-.project:not(.is-featured) .highlights li { background: transparent; border: none; padding: 0; }
+.project:not(.is-featured):not(.is-wide) .highlights li { background: transparent; border: none; padding: 0; }
 
 .more-work { display: flex; justify-content: center; margin-top: 36px; }
 
@@ -744,4 +744,15 @@ a:hover > .arrow, .btn:hover .arrow { transform: translate(2px, -2px); }
   font-size: 0.88rem;
   line-height: 1.6;
   color: var(--muted);
+}
+
+/* Full-width card without the featured border */
+.project.is-wide {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+}
+@media (max-width: 860px) {
+  .project.is-wide { grid-template-columns: 1fr; gap: 24px; padding: 28px; }
 }
